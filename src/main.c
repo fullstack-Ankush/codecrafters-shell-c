@@ -8,10 +8,10 @@ int main(int argc, char *argv[]) {
   char command[100];
   fgets(command ,100,stdin);
   command[strlen(command)-1] = '\0';
+  printf("$ ");
   printf("%s:command not found \n");
 
   // TODO: Uncomment the code below to pass the first stage
-  printf("$ ");
 
 
 
