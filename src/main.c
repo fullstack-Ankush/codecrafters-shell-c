@@ -6,9 +6,9 @@ int main(int argc, char *argv[]) {
   // Flush after every printf
   setbuf(stdout, NULL);
   char command[100];
+  printf("$ ");
   fgets(command ,100,stdin);
   command[strlen(command)-1] = '\0';
-  printf("$ ");
   printf("%s:command not found \n");
 
   // TODO: Uncomment the code below to pass the first stage
