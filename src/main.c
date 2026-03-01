@@ -48,3 +48,28 @@ int main(int argc, char *argv[]) {
     else
       printf("%s: command not found\n", tmp_input);
   }
+}
+
+int find_file(char *arg, char *path_env, int verbose) {
+  char penv[strlen(path_env)];
+  char *path;
+  char tmp[999];
+  int found;
+
+  strcpy(penv, path_env);
+  path = strtok(penv, PATH_SEP);
+  found = 0;
+  while (path != NULL && !found) {
+    sprintf(tmp, "%s/%s", path, arg);
+    if (access(tmp, X_OK) == 0) {
+      found = 1;
+      break;
+    }
+    path = strtok(NULL, PATH_SEP);
+  }
+  if (found && verbose)
+    printf("%s is %s\n", arg, tmp);
+  else if (verbose)
+    printf("%s: not found\n", arg);
+  return (found);
+}
