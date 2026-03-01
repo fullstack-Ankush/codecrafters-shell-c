@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
   printf("%s:command not found \n");
 
   // TODO: Uncomment the code below to pass the first stage
-  // printf("$ ");
+  printf("$ ");
 
 
 
