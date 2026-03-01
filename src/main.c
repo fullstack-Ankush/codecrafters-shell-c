@@ -10,7 +10,10 @@ int main(int argc, char *argv[]) {
     printf("$ ");
     fgets(command ,100,stdin);
     command[strlen(command)-1] = '\0';
+    if(strcmp(command,"exit") == 0)
+      exit(1);
     printf("%s: command not found \n",command);
+
 
   }
   
