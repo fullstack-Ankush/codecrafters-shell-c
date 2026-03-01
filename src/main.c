@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
   printf("$ ");
   fgets(command ,100,stdin);
   command[strlen(command)-1] = '\0';
-  printf("%s :command not found \n",command);
+  printf("%s: command not found \n",command);
 
   // TODO: Uncomment the code below to pass the first stage
 
