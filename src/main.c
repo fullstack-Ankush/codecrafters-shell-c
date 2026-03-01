@@ -12,6 +12,11 @@ int main(int argc, char *argv[]) {
     command[strlen(command)-1] = '\0';
     if(strcmp(command,"exit") == 0)
       exit(0);
+    if(strncmp(command,"echo ",5) == 0){
+      printf("%s\n",command+5);
+      break;
+    }
+      
     printf("%s: command not found \n",command);
 
 
