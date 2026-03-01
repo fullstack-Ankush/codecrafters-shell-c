@@ -17,20 +17,18 @@ int main(int argc, char *argv[]) {
       continue;
     }
     if(strncmp(command,"type ",5) == 0){
-      if(strcmp(command,"echo") || strcmp(command,"type") || strcmp(command,"exit")== 0) {
-        printf("%s : is a shell builtin\n",command+5);
+      char *cmd = command +5;
+      if(strcmp(cmd,"echo")==0 || strcmp(cmd,"type")==0 || strcmp(cmd,"exit")== 0) {
+        printf("%s : is a shell builtin\n",cmd);
         continue;
 
       }
       else{
-        printf("%s: not found",command+5);
+        printf("%s: not found\n",cmd);
         continue;
       }
-    }
-      
+    } 
     printf("%s: command not found \n",command);
-
-
   }
   
 
