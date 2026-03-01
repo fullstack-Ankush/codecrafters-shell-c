@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     if(strncmp(command,"type ",5) == 0){
       char *cmd = command +5;
       if(strcmp(cmd,"echo")==0 || strcmp(cmd,"type")==0 || strcmp(cmd,"exit")== 0) {
-        printf("%s : is a shell builtin\n",cmd);
+        printf("%s is a shell builtin\n",cmd);
         continue;
 
       }
